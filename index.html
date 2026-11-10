@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="BNB HOST: descubre casas, villas, hoteles, habitaciones y apartamentos para tus próximas vacaciones o viajes.">
+  <meta name="keywords" content="alquiler de casas, villas, hoteles, habitaciones, apartamentos, alojamientos, reservas">
+  <meta name="theme-color" content="#123c32">
+  <meta name="robots" content="index, follow">
+  <title>BNB HOST | Alojamientos y Reservas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#inicio" aria-label="BNB HOST, inicio">BNB<span>HOST</span></a>
+
+      <button aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"
+              class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#alojamientos">Alojamientos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a class="nav-button" href="#contacto">Publicar alojamiento</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">BIENVENIDO A BNB HOST</span>
+        <h1>Encuentra el lugar perfecto para tu próxima estancia.</h1>
+        <p>Descubre casas, villas, apartamentos, hoteles y habitaciones. Encuentra tu próximo destino y solicita tu reserva fácilmente.</p>
+        <a class="primary-button" href="#alojamientos">Explorar alojamientos</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container search-wrap">
+    <form class="search-box" id="searchForm">
+      <div class="field">
+        <label for="destination">Destino</label>
+        <input id="destination" name="destination" placeholder="¿A dónde quieres ir?" type="text" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="checkin">Entrada</label>
+        <input id="checkin" name="checkin" type="date">
+      </div>
+      <div class="field">
+        <label for="checkout">Salida</label>
+        <input id="checkout" name="checkout" type="date">
+      </div>
+      <div class="field">
+        <label for="typeFilter">Tipo de alojamiento</label>
+        <select id="typeFilter" name="type">
+          <option value="">Todos</option>
+          <option value="casa">Casas</option>
+          <option value="villa">Villas</option>
+          <option value="hotel">Hoteles</option>
+          <option value="habitacion">Habitaciones</option>
+          <option value="apartamento">Apartamentos</option>
+        </select>
+      </div>
+      <button class="search-button" type="submit">Buscar</button>
+    </form>
+  </div>
+
+  <main>
+    <section class="section" id="alojamientos">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">DESCUBRE TU DESTINO</span>
+            <h2>Alojamientos destacados</h2>
+            <p>Explora espacios seleccionados para disfrutar tu estancia.</p>
+          </div>
+          <span class="results-count" id="resultsCount" aria-live="polite">4 alojamientos</span>
+        </div>
+
+        <div class="categories" aria-label="Filtrar por categoría">
+          <a class="category" href="#alojamientos" data-category="casa"><span class="category-icon">🏡</span><strong>Casas</strong></a>
+          <a class="category" href="#alojamientos" data-category="villa"><span class="category-icon">🌴</span><strong>Villas</strong></a>
+          <a class="category" href="#alojamientos" data-category="hotel"><span class="category-icon">🏨</span><strong>Hoteles</strong></a>
+          <a class="category" href="#alojamientos" data-category="habitacion"><span class="category-icon">🛏️</span><strong>Habitaciones</strong></a>
+          <a class="category" href="#alojamientos" data-category="apartamento"><span class="category-icon">🏢</span><strong>Apartamentos</strong></a>
+        </div>
+
+        <div class="properties" id="properties">
+          <article class="property-card" data-type="villa" data-location="punta cana">
+            <div class="carousel">
+              <div class="carousel-track">
+                <img alt="Villa con piscina y jardín" loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Terraza de villa" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Piscina de alojamiento" loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Interior de villa" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+              </div>
+              <button aria-label="Foto anterior" class="carousel-arrow prev" type="button">‹</button>
+              <button aria-label="Foto siguiente" class="carousel-arrow next" type="button">›</button>
+              <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
+            <div class="property-info">
+              <span class="property-type">Villa</span>
+              <h3>Villa Paradise</h3>
+              <p class="property-location">📍 Punta Cana, República Dominicana</p>
+              <div class="property-details"><span>🛏️ 3 habitaciones</span><span>🚿 2 baños</span><span>🏊 Piscina</span></div>
+              <div class="property-bottom">
+                <div class="property-price">Precio por noche<strong>Consultar</strong></div>
+                <button class="whatsapp-button" data-property="Villa Paradise" type="button">Consultar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-type="casa" data-location="barahona">
+            <div class="carousel">
+              <div class="carousel-track">
+                <img alt="Casa moderna" loading="lazy" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Sala de casa moderna" loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Cocina moderna" loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Habitación de casa" loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+              </div>
+              <button aria-label="Foto anterior" class="carousel-arrow prev" type="button">‹</button>
+              <button aria-label="Foto siguiente" class="carousel-arrow next" type="button">›</button>
+              <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
+            <div class="property-info">
+              <span class="property-type">Casa</span>
+              <h3>Casa Familiar</h3>
+              <p class="property-location">📍 Barahona, República Dominicana</p>
+              <div class="property-details"><span>🛏️ 2 habitaciones</span><span>🚿 1 baño</span><span>🍽️ Cocina</span></div>
+              <div class="property-bottom">
+                <div class="property-price">Precio por noche<strong>Consultar</strong></div>
+                <button class="whatsapp-button" data-property="Casa Familiar" type="button">Consultar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-type="hotel" data-location="santo domingo">
+            <div class="carousel">
+              <div class="carousel-track">
+                <img alt="Hotel moderno" loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Piscina de hotel" loading="lazy" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Habitación de hotel" loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Restaurante de hotel" loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+              </div>
+              <button aria-label="Foto anterior" class="carousel-arrow prev" type="button">‹</button>
+              <button aria-label="Foto siguiente" class="carousel-arrow next" type="button">›</button>
+              <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
+            <div class="property-info">
+              <span class="property-type">Hotel</span>
+              <h3>Hotel Elegance</h3>
+              <p class="property-location">📍 Santo Domingo, República Dominicana</p>
+              <div class="property-details"><span>🛏️ Habitaciones</span><span>🍽️ Restaurante</span><span>🏊 Piscina</span></div>
+              <div class="property-bottom">
+                <div class="property-price">Precio por noche<strong>Consultar</strong></div>
+                <button class="whatsapp-button" data-property="Hotel Elegance" type="button">Consultar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-type="apartamento" data-location="juan dolio">
+            <div class="carousel">
+              <div class="carousel-track">
+                <img alt="Apartamento moderno" loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Sala de apartamento" loading="lazy" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Dormitorio de apartamento" loading="lazy" src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+                <img alt="Comedor de apartamento" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80">
+              </div>
+              <button aria-label="Foto anterior" class="carousel-arrow prev" type="button">‹</button>
+              <button aria-label="Foto siguiente" class="carousel-arrow next" type="button">›</button>
+              <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
+            <div class="property-info">
+              <span class="property-type">Apartamento</span>
+              <h3>Apartment Ocean View</h3>
+              <p class="property-location">📍 Juan Dolio, República Dominicana</p>
+              <div class="property-details"><span>🛏️ 2 habitaciones</span><span>🚿 2 baños</span><span>🌊 Vista al mar</span></div>
+              <div class="property-bottom">
+                <div class="property-price">Precio por noche<strong>Consultar</strong></div>
+                <button class="whatsapp-button" data-property="Apartment Ocean View" type="button">Consultar</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="empty-state" id="emptyState">
+            <h3>No encontramos alojamientos</h3>
+            <p>Prueba con otro destino o tipo de alojamiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why" id="nosotros">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LA EXPERIENCIA BNB HOST</span>
+            <h2>Tu próxima estancia comienza aquí.</h2>
+            <p>Te ayudamos a encontrar el espacio ideal para tu viaje.</p>
+          </div>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><div class="benefit-icon">🏡</div><h3>Variedad de alojamientos</h3><p>Casas, villas, hoteles, apartamentos y habitaciones en diferentes destinos.</p></div>
+          <div class="benefit"><div class="benefit-icon">💬</div><h3>Atención directa</h3><p>Comunícate por WhatsApp para solicitar información y consultar disponibilidad.</p></div>
+          <div class="benefit"><div class="benefit-icon">🌎</div><h3>Descubre destinos</h3><p>Explora diferentes lugares y encuentra opciones para tus próximas vacaciones.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container">
+        <span class="eyebrow">BNB HOST</span>
+        <h2>¿Tienes un alojamiento?</h2>
+        <p>Forma parte de BNB HOST y presenta tu casa, villa, hotel, habitación o apartamento a nuevos clientes.</p>
+        <a class="primary-button" href="https://wa.me/18498171998?text=Hola%2C%20quiero%20publicar%20mi%20alojamiento%20en%20BNB%20HOST." rel="noopener noreferrer" target="_blank">Publicar mi alojamiento</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div><a class="logo" href="#inicio">BNB<span>HOST</span></a><p>Encuentra tu próximo lugar favorito.</p></div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a><a href="#alojamientos">Alojamientos</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+      </div>
+      <p>© <span id="currentYear">2026</span> BNB HOST. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a aria-label="Contactar por WhatsApp" class="whatsapp-float"
+     href="https://wa.me/18498171998?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20BNB%20HOST."
+     rel="noopener noreferrer" target="_blank">☎</a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
